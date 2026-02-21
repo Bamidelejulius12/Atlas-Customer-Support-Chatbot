@@ -9,8 +9,8 @@ on:
 
 env:
   # Docker Hub repos (edit only the repo names if you prefer different ones)
-  BACKEND_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/atlas-hotel-chatbot-backend
-  FRONTEND_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/atlas-hotel-chatbot-frontend
+  BACKEND_IMAGE: ${{ secrets.DOCKER_USERNAME }}/atlas-hotel-chatbot-backend
+  FRONTEND_IMAGE: ${{ secrets.DOCKER_USERNAME }}/atlas-hotel-chatbot-frontend
   
 
 jobs:
