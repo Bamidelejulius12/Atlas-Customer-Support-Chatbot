@@ -1,0 +1,11 @@
+streamlit
+fastapi
+uvicorn
+python-dotenv
+openai == 1.109.0
+langchain ==  0.3.25
+langchain-openai == 0.3.21
+langchain-pinecone == 0.2.13
+pinecone
+asyncio
+pydantic
