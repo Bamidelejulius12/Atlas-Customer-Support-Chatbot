@@ -15,6 +15,7 @@ app.add_middleware(
         "http://localhost:8501",
         "http://127.0.0.1:8501",
         "http://54.160.143.137:8501",  # Your Streamlit frontend
+        "http://13.217.228.168:8501"
     ],
     allow_credentials=False,
     allow_methods=["*"],
