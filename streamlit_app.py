@@ -1,9 +1,13 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import uuid
+from dotenv import load_dotenv
+load_dotenv(override=True )
 
 # API URL
-API_URL = "http://localhost:8000/chat"
+import os
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
+API_URL = f"{API_BASE_URL}/chat"
 
 # Session
 if "session_id" not in st.session_state:
