@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import uuid
 from dotenv import load_dotenv
-load_dotenv(override=True )
+load_dotenv(override=True)
 
 # API URL
 import os
@@ -55,6 +55,7 @@ with st.sidebar:
 # CHAT INTERFACE (HTML)
 # ===============================
 
+# Use f-string for the entire HTML block to interpolate Python variables
 chat_html = f"""
 <!DOCTYPE html>
 <html>
@@ -67,59 +68,59 @@ chat_html = f"""
 <style>
 
 body,html{{
-	height:70%;
-	margin:0;
-	background:rgba(0,0,0,0.4);
+    height:70%;
+    margin:0;
+    background:rgba(0,0,0,0.4);
 }}
 
 .chat{{
-	margin:auto;
+    margin:auto;
 }}
 
 .card{{
-	height:600px;
-	border-radius:15px;
-	background-color:rgba(0,0,0,0.9);
+    height:600px;
+    border-radius:15px;
+    background-color:rgba(0,0,0,0.9);
     border:2px solid #52acff;
 }}
 
 .msg_card_body{{
-	overflow-y:auto;
+    overflow-y:auto;
 }}
 
 .type_msg{{
-	background-color:rgba(0,0,0,0.3);
-	border:0;
-	color:whitesmoke;
-	height:60px;
+    background-color:rgba(0,0,0,0.3);
+    border:0;
+    color:whitesmoke;
+    height:60px;
 }}
 
 .send_btn{{
-	background-color:rgba(0,0,0,0.3);
-	border:0;
-	color:white;
+    background-color:rgba(0,0,0,0.3);
+    border:0;
+    color:white;
 }}
 
 .msg_cotainer{{
-	border-radius:25px;
-	background-color:#52acff;
-	padding:10px;
+    border-radius:25px;
+    background-color:#52acff;
+    padding:10px;
 }}
 
 .msg_cotainer_send{{
-	border-radius:25px;
-	background-color:#58cc71;
-	padding:10px;
+    border-radius:25px;
+    background-color:#58cc71;
+    padding:10px;
 }}
 
 .user_img{{
-	height:60px;
-	width:60px;
+    height:60px;
+    width:60px;
 }}
 
 .user_img_msg{{
-	height:35px;
-	width:35px;
+    height:35px;
+    width:35px;
 }}
 .user_info {{
     display:flex;
@@ -222,6 +223,7 @@ $("#chatForm").on("submit", function(e){{
     $("#messageBody").append(userHtml);
     $("#msg").val("");
 
+    // CORRECTED: Python f-string interpolation for API_URL and session state variables
     fetch("{API_URL}", {{
         method:"POST",
         headers:{{
