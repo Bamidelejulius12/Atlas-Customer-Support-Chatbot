@@ -164,12 +164,12 @@ body,html{{
 
 
 <div id="messageBody" class="card-body msg_card_body">
-<!-- Initial greeting message -->
-<div class="d-flex justify-content-start mb-3">
-    <div class="msg_cotainer">
-        Hi esteemed customer, how can I be of help today?
+    <!-- Initial greeting message -->
+    <div class="d-flex justify-content-start mb-3">
+        <div class="msg_cotainer">
+            Hi esteemed customer, how can I be of help today?
+        </div>
     </div>
-</div>
 </div>
 
 
